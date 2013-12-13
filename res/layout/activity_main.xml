@@ -2,7 +2,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center_horizontal"
     tools:context=".MainActivity" >
 
 
@@ -11,9 +10,9 @@
         android:id="@+id/first_number"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:ems="10"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
         android:hint="First Number..."
         android:inputType="numberSigned" />
@@ -33,7 +32,7 @@
         android:id="@+id/second_number"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
+        android:layout_alignLeft="@+id/first_number"
         android:layout_below="@+id/first_number"
         android:ems="10"
         android:hint="Second Number..."
@@ -43,6 +42,7 @@
         android:id="@+id/evaluate_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/first_number"
         android:layout_below="@+id/second_number"
         android:text="Evaluate" />
 
@@ -50,6 +50,7 @@
         android:id="@+id/equals"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/result_text"
         android:layout_alignLeft="@+id/evaluate_btn"
         android:layout_below="@+id/evaluate_btn"
         android:layout_marginLeft="10dp"
@@ -63,7 +64,7 @@
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@+id/equals"
         android:layout_below="@+id/evaluate_btn"
-        android:layout_toRightOf="@+id/equals"
+        android:layout_centerInParent="true"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <LinearLayout
